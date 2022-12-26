@@ -1,36 +1,31 @@
 /*
  * Description: Auto-hide sidebar.
  *
- * Contributor(s): img2tab
+ * Contributor(s): img2tab, heets99
  */
 
 /* To right-align the sidebar, replace all occurrences of "left" with "right", and "margin-right" with "margin-left" */
 
-:root {
-  --sidebar-hover-width: 10px;
-  --sidebar-visible-width: 200px;
-}
-
 #sidebar-box {
+  --sidebar-hover-width: 40px;
   position: relative !important;
   overflow-x: hidden !important;
   margin-right: calc(var(--sidebar-hover-width) * -1) !important;
-  left: var(--sidebar-hover-width) !important;
   min-width: var(--sidebar-hover-width) !important;
   max-width: var(--sidebar-hover-width) !important;
   border-right: 1px solid var(--sidebar-border-color);
-  z-index: 1;
+  z-index:2147483647 !important;
 }
 
 #sidebar-box:hover {
+  --sidebar-visible-width: 200px;
   margin-right: calc(var(--sidebar-visible-width) * -1) !important;
-  left: var(--sidebar-visible-width) !important;
   min-width: var(--sidebar-visible-width) !important;
   max-width: var(--sidebar-visible-width) !important;
 }
 
 #sidebar {
-  opacity: 0 !important;
+  opacity: 1 !important;
 }
 
 #sidebar-box:hover #sidebar {
